@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800,800i');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.fullscreen {
+	width: 100%;
+	height: 100vh;
+	box-sizing: border-box;
+	background: #0c0b09;
+}
+
+.center-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bg {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
