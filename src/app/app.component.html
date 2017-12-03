@@ -2,10 +2,17 @@
     <header>
         <h1>LUMBER</h1>
         <div class="credits">
-            <ul>
-                <li>666</li>
-                <li>666</li>
-            </ul>
+            <div *ngIf="coins != null; else loginButton" class="right-side">
+                <ul>
+                    <li>{{ coins.gold }}</li>
+                    <li>{{ coins.silver }}</li>
+                </ul>
+                <button class="transp">LOGOFF</button>
+            </div>    
+             <ng-template #loginButton>
+                <button class="full">LOGIN</button>
+                <button class="transp">SIGNUP</button>
+            </ng-template>
         </div>
     </header>
     <router-outlet></router-outlet>

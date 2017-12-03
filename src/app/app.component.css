@@ -16,6 +16,16 @@ header h1 {
 	font-weight: 800;
 }
 
+header .right-side {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+header .right-side button {
+	margin-left: 30px;
+}
+
 header ul {
 	list-style: none;
 }
@@ -63,6 +73,30 @@ header li:nth-child(2)::before {
 	background: #f7f7f7;
 	border-color: #5c5c5c;
 	color: #5c5c5c;
+}
+
+header button {
+	border: none;
+	padding: 10px 30px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	color: white;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+header button:hover {
+	opacity: 0.5;
+}
+
+header button.full {
+	background: #ff8f00;
+}
+
+header button.transp {
+	background: transparent;
+}
+header button.transp:hover {
+	text-decoration: underline;
 }
 
 footer, footer ul, footer nav, footer li {

@@ -9,6 +9,6 @@ import { Component, OnInit } from '@angular/core'
 export default class Home implements OnInit{
 
 	ngOnInit() {
-		console.log('vaitomanocucomforza')
+		console.log('homee')
 	}
 }
