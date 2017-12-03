@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800,800i');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 * {
 	padding: 0;
@@ -10,7 +11,6 @@
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
-	background: #0c0b09;
 }
 
 .center-content {
@@ -23,4 +23,58 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.75);
+	z-index: 20;
+}
+.modal .content {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	background: white;
+}
+
+.modal h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	color: rgba(0,0,0,0.75);
+	margin-bottom: 15px;
+}
+
+.modal input {
+	width: 300px;
+	padding: 15px;
+	border: none;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0.1);
+}
+
+.modal .actions {
+	display: flex;
+	margin-top: 10px;
+}
+
+.modal button {
+	width: 100%;
+	padding: 15px;
+	border: none;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.modal button:nth-child(1) {
+	background: #ff8f00;
+	color: white;
+}
+
+.modal button:nth-child(2) {
+	background: transparent;
+	color: rgba(0,0,0,0.26);
 }

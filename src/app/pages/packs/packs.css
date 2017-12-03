@@ -103,3 +103,7 @@
 .packs .inf img {
 	padding-left: 1vw;
 }
+
+.packs .modal .content {
+	width: 360px;
+}

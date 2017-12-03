@@ -1,8 +1,19 @@
 <div class="packs fullscreen bg center-content">
+	<div *ngIf="modalOpened"
+        class="modal fullscreen center-content"
+    >
+        <div class="content">
+            <h2>Comprar Créditos ?</h2>
+            <div class="actions">
+                <button (click)="confirm()">CONFIRMAR</button>
+                <button (click)="toggleModal()">CANCELAR</button>
+            </div>
+        </div>
+    </div>
 	<ul class="content">
 		<li *ngFor="let l of lists" class="wrapper">
 			<ul class="list">
-				<li *ngFor="let p of l" class="pack">
+				<li *ngFor="let p of l" class="pack" (click)="buy(p)">
 					<div class="inf">
 						<span class="dolar">$</span>
 						<span class="text">{{ p.moedas }}</span>

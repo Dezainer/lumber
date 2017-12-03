@@ -1,20 +1,39 @@
-<div>
+<div class="fullscreen">
     <header>
         <h1>LUMBER</h1>
         <div class="credits">
             <div *ngIf="coins != null; else loginButton" class="right-side">
-                <ul>
-                    <li>{{ coins.gold }}</li>
-                    <li>{{ coins.silver }}</li>
-                </ul>
-                <button class="transp">LOGOFF</button>
+                <a routerLink="/packs">
+                    <ul>
+                        <li>{{ coins.gold }}</li>
+                        <li>{{ coins.silver }}</li>
+                    </ul>
+                </a>
+                <button class="transp" (click)="logOff()">LOGOFF</button>
             </div>    
              <ng-template #loginButton>
-                <button class="full">LOGIN</button>
+                <button class="full" (click)="toggleModal()">LOGIN</button>
                 <button class="transp">SIGNUP</button>
             </ng-template>
         </div>
     </header>
+    <div *ngIf="modalOpened"
+        class="login modal fullscreen center-content"
+    >
+        <div class="content">
+            <h2>Login</h2>
+            <input (keyup)="bindInput($event)"
+                type="text" name="login" placeholder="Login"
+            >
+            <input (keyup)="bindInput($event)"
+                type="password" name="senha" placeholder="Senha"
+            >
+            <div class="actions">
+                <button (click)="submit()">ENTRAR</button>
+                <button (click)="toggleModal()">CANCELAR</button>
+            </div>
+        </div>
+    </div>
     <router-outlet></router-outlet>
     <footer>
         <nav>

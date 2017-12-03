@@ -32,7 +32,9 @@ export default class Reqs {
 
 		return fetch(this.baseUrl+route, conf)
 			.then(response => 
-				response.json()
+				response.status == 200
+					? response.json()
+					: null
 			)
 	}
 }
