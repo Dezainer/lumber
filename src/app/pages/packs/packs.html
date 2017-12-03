@@ -1,17 +1,15 @@
-<div class="packs fullscreen bg">
-	<ul>
-		<li *ngFor="let l of lists">
-			<ul>
-				<li *ngFor="let p of l.packs">
-					<div class="content">
-						<div class="inf">
-							<img src="">
-							<span></span>
-						</div>
-						<div class="price">
-							<span></span>
-							<img src="">
-						</div>
+<div class="packs fullscreen bg center-content">
+	<ul class="content">
+		<li *ngFor="let l of lists" class="wrapper">
+			<ul class="list">
+				<li *ngFor="let p of l" class="pack">
+					<div class="inf">
+						<span class="dolar">$</span>
+						<span class="text">{{ p.moedas }}</span>
+					</div>
+					<div class="inf">
+						<span class="text">{{ p.valor | currency:'BRL':'symbol' }}</span>
+						<img src="../../../assets/footage/cart.png">
 					</div>
 				</li>
 			</ul>

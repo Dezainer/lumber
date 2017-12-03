@@ -1,3 +1,111 @@
 .seasons {
-	background-image: url('../../../assets/footage/seasons-bg.png')
+	display: flex;
+	align-items: center;
+	background-image: url('../../../assets/footage/seasons-bg.png');
+}
+
+.seasons ul {
+	width: 100%;
+	padding: 10vw 0 10vw 20vw;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.seasons ul:hover .tile {
+	filter: brightness(0.5);
+}
+
+.seasons li {
+	display: inline-block;
+	margin: 0 1vw;
+}
+
+.seasons .tile {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 35vh;
+	height: 50vh;
+	background: white;
+	box-shadow: 0 0 50px 0 rgba(0,0,0,0.5);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.seasons .tile:hover {
+	transform: scale(1.2);
+	filter: brightness(1) !important;
+}
+
+.seasons .top {
+	position: relative;
+	width: 100%;
+	height: 37%;
+	background: url('../../../assets/footage/season-top.png')
+}
+
+.seasons .axe {
+	width: 25vh;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translate(-50%, 0);
+}
+
+.seasons .wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 63%;
+}
+
+.seasons .content {
+	padding: 20px;
+}
+
+.seasons h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 1.2vw;
+	color: #5c5c5c;
+}
+
+.seasons span {
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 1em;
+	color: #ff8f00;
+	padding-left: 20px;
+}
+.seasons span::before {
+	content: '';
+	position: absolute;
+	top: 15%;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background: url('../../../assets/footage/axe-icon.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.seasons p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: rgba(0,0,0,0.26);
+	padding-top: 10px;
+}
+
+.seasons button {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-size: 1em;
+	color: white;
+	border: none;
+	padding: 2vh 0;
+	background: #303225;
+	cursor: pointer;
 }

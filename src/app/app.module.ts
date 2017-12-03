@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Router, Routes, NavigationStart, RouterLinkActive } from '@angular/router'
+import { CurrencyPipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 

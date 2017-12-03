@@ -3,14 +3,16 @@
 		<li *ngFor="let s of seasons">
 			<div class="tile">
 				<div class="top">
-					<img class="axe"/>
+					<img class="axe" [src]="'../../../assets/footage/'+s.machado.img"/>
 				</div>
-				<div class="content">
-					<h3>{{ s.nome }}</h3>
-					<span>{{ s.valor }}</span>
-					<p class="desc">{{ s.descricao }}</p>
+				<div class="wrapper">
+					<div class="content">
+						<h3>{{ s.nome }}</h3>
+						<span>{{ s.valor }}</span>
+						<p class="desc">{{ s.descricao }}</p>
+					</div>
+					<button>ENTRAR</button>
 				</div>
-				<button>ENTRAR</button>
 			</div>
 		</li>
 	</ul>
